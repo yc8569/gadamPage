@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <link rel="shortcut icon" href="https://www.smartsafecall.com/favicon.ico" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="naver-site-verification"
+      content="a10b313c1d24a8cb1672ab227c21b67673534054"
+    />
+    <meta
+      name="keywords"
+      content="스마트안심번호, 안심번호, 안심전화번호, 안심주차, 주차안심, 라온안심번호, 주차번호, 주차안심번호, 안심번호주차번호판, 안심번호발급, 전화번호, 차량용연락처, 투넘버서비스, 차량전화번호판, 듀얼번호, 안심번호주차번호판, 안심번호문자, 주차안심번호, 주차안심번호서비스, 차량용전화번호, 안심번호만들기, 차량안심번호, 가상번호, 안심전화번호발급, 안심번호서비스"
+    />
+    <meta
+      name="description"
+      content="전화번호 노출 없는 양방향 가상 전화번호, 스마트 안심번호 안심주차 서비스"
+    />
+    <meta property="og:title" content="스마트 안심번호 - 안심주차" />
+    <meta
+      property="og:description"
+      content="전화번호 노출 없는 양방향 가상 전화번호, 스마트 안심번호 안심주차 서비스"
+    />
+    <link rel="stylesheet" href="./assets/css/common/reset.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+
+	<style>
+		@media (max-width: 768px) {
+			header .logo img {
+				width: 25vw;
+				height: 9.375vw;
+			}
+		}
+	</style>
+
+    <title>스마트 안심번호 - 안심주차</title>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-V3GJHTFP1S");
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo" onclick="handleCall()">
+          <img src="./assets/images/logo-original.svg" alt="로고" />
+          <h5><span class="pc-only-inline">1877-1875</span></h5>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="button-group">
+          <button class="btn-login" onclick="moveLogin()">로그인</button>
+          <span class="mo-only-inline line"></span>
+          <button class="btn-signup" onclick="moveJoin()">회원가입</button>
+        </div>
+
+        <button class="mo-only" onclick="handleCall()">
+          <img src="./assets/images/icon-call.svg" alt="전화연결" />
+        </button>
+      </div>
+    </header>
+
+    <section class="section-01">
+      <div class="container">
+        <div class="text-item slide-up">
+          <p>
+            전화번호 노출 없는 <br />
+            양방향 가상 전화번호
+          </p>
+
+          <div class="title" onclick="handleCall()">
+            <h5>스마트 안심번호 안심주차</h5>
+            <h4>1877-1875</h4>
+          </div>
+
+          <div class="button-group">
+            <button class="btn-login" onclick="moveLogin()">로그인</button>
+            <button class="btn-signup" onclick="moveJoin()">회원가입</button>
+          </div>
+        </div>
+
+        <div class="background">
+          <img
+            src="./assets/images/background-01-pc.png"
+            alt="배경이미지01"
+            class="background-img background-01"
+          />
+          <img
+            src="./assets/images/background-02.png"
+            alt="배경이미지02"
+            class="background-img background-02"
+          />
+          <img
+            src="./assets/images/background-03.png"
+            alt="배경이미지03"
+            class="background-img background-03"
+          />
+          <img
+            src="./assets/images/background-04.png"
+            alt="배경이미지04"
+            class="background-img background-04"
+          />
+          <img
+            src="./assets/images/background-05.png"
+            alt="배경이미지05"
+            class="background-img background-05"
+          />
+          <img
+            src="./assets/images/background-06.png"
+            alt="배경이미지06"
+            class="background-img background-06"
+          />
+          <img
+            src="./assets/images/background-07.png"
+            alt="배경이미지07"
+            class="background-img background-07"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="section-02">
+      <div class="container">
+        <div class="title">
+          <h5>주차하실 때 개인전화번호를 <br />차량에 남겨 두셨나요?</h5>
+          <p>무방비로 노출된 전화번호로 인한 사생활 침해 위험!</p>
+        </div>
+
+        <div class="item-group">
+          <div class="box-item">
+            <h5 class="number">01</h5>
+
+            <div class="text-item">
+              <p>개인정보 도용</p>
+              <p>
+                무분별한 광고전화와 <br class="mo-only" />
+                광고문자
+              </p>
+            </div>
+
+            <img
+              src="./assets/images/section2/svg/icon-01.svg"
+              alt="개인정보 도용 아이콘"
+              class="icon"
+            />
+          </div>
+
+          <div class="box-item">
+            <h5 class="number">02</h5>
+
+            <div class="text-item">
+              <p>사생활 노출</p>
+              <p>
+                전화번호와 연동된 <br class="mo-only" />
+                메신저 프로필과<br />
+                소셜미디어 계정
+              </p>
+            </div>
+
+            <img
+              src="./assets/images/section2/svg/icon-02.svg"
+              alt="사생활 노출 아이콘"
+              class="icon"
+            />
+          </div>
+
+          <div class="box-item">
+            <h5 class="number">03</h5>
+
+            <div class="text-item">
+              <p>스토킹 범죄</p>
+              <p>
+                매년 증가하는<br class="mo-only" />
+                사생활 침해 범죄<br />
+                국내 스토킹 범죄신고 약 3만건
+              </p>
+            </div>
+
+            <img
+              src="./assets/images/section2/svg/icon-03.svg"
+              alt="스토킹 범죄 아이콘"
+              class="icon"
+            />
+          </div>
+
+          <div class="box-item">
+            <h5 class="number">04</h5>
+
+            <div class="text-item">
+              <p>
+                보이스피싱 범죄<br class="mo-only" />
+                노출 확률 증가
+              </p>
+              <p>
+                임의로 번호를 수집하여<br class="mo-only" />
+                스팸이나<br class="pc-only" />
+                보이스피싱 범죄에 <br class="mo-only" />
+                노출될 위험 증가
+              </p>
+            </div>
+
+            <img
+              src="./assets/images/section2/svg/icon-04.svg"
+              alt="스토킹 범죄 아이콘"
+              class="icon"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="background">
+        <p>보이스피싱 피해금액 <br />약 1조 7천억원</p>
+        <p>
+          무심코 차량에 남긴 전화번호 <br />
+          보이스피싱 피해...
+        </p>
+        <p>
+          강남 30대 여성 납치 사건 <br />
+          차량에 적힌 전화번호로...
+        </p>
+        <p>
+          5년간 스토킹 한 범인,<br />
+          잡고보니 같은 아파트 주민
+        </p>
+      </div>
+    </section>
+
+    <section class="section-03">
+      <div class="container">
+        <div class="title">
+          <h5>
+            이제 스마트 안심번호-안심주차로<br />소중한 전화번호를 보호하세요.
+          </h5>
+          <p>라온 스마트 안심번호여야 하는 이유!</p>
+        </div>
+
+        <div class="item-group">
+          <div class="box-item">
+            <div class="text-item">
+              <p>수신자·발신자 양방향 안심번호</p>
+              <p>
+                수신자는 물론 발신자까지 모두 동일한<br />안심번호(1877-1875)
+                사용으로 양방향 보호 가능!
+              </p>
+            </div>
+
+            <div class="image-item">
+              <img
+                src="./assets/images/section3/content-01.png"
+                alt="이미지 아이템 01"
+                class="content-01"
+              />
+              <img
+                src="./assets/images/section3/icon-phone.png"
+                alt="이미지 아이템 01 - 전화아이콘"
+                class="img-icon-phone"
+              />
+            </div>
+          </div>
+
+          <div class="box-item">
+            <div class="image-item">
+              <img
+                src="./assets/images/section3/content-02-pc.png"
+                alt="이미지 아이템 02"
+                class="content-02"
+              />
+              <img
+                src="./assets/images/section3/icon-xbox.png"
+                alt="이미지 아이템 02 - 박스아이콘"
+                class="img-icon-xbox"
+              />
+              <img
+                src="./assets/images/section3/icon-call.png"
+                alt="이미지 아이템 02 - 전화아이콘"
+                class="img-icon-call"
+              />
+            </div>
+
+            <div class="text-item">
+              <p>차량번호만으로 간편한 통화 연결</p>
+              <p>
+                1877-1875 연결 후 차량번호만 입력하면<br />바로 차주와 통화
+                가능!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-04">
+      <div class="container">
+        <div class="title">
+          <h5>이용방법</h5>
+        </div>
+
+        <div class="item-group">
+          <div class="step">
+            <div class="step-item">
+              <p>Step 01</p>
+              <img
+                src="./assets/images/section4/step-01.png"
+                alt="스텝 회원가입 이미지"
+              />
+              <div class="bottom">
+                <h5>회원가입</h5>
+                <span>
+                  이름, 차량번호, 휴대폰번호<br />
+                  입력만 하면 회원가입 완료!
+                </span>
+              </div>
+            </div>
+            <div class="arrow first-arrow">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="17"
+                viewBox="0 0 12 17"
+                fill="none"
+              >
+                <path
+                  d="M1.31222e-06 2.8867L1.80296e-06 14.1134C-0.000645723 14.5566 0.125401 14.9909 0.363554 15.3661C0.601706 15.7413 0.942226 16.042 1.3457 16.2334C1.82442 16.4574 2.35703 16.5437 2.88285 16.4824C3.40866 16.4211 3.90652 16.2147 4.31969 15.8867L11.1827 10.2734C11.4393 10.0531 11.645 9.78072 11.786 9.47476C11.927 9.1688 12 8.83638 12 8.50003C12 8.16368 11.927 7.83126 11.786 7.5253C11.645 7.21934 11.4393 6.94698 11.1827 6.7267L4.31969 1.11336C3.90652 0.785352 3.40866 0.578941 2.88285 0.517649C2.35703 0.456356 1.82442 0.542652 1.3457 0.766695C0.942226 0.958085 0.601706 1.25877 0.363553 1.63396C0.125401 2.00914 -0.000646252 2.44348 1.31222e-06 2.8867Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="step-item">
+              <p>Step 02</p>
+              <img
+                src="./assets/images/section4/step-02.png"
+                alt="스텝 스티커 부착 이미지"
+              />
+              <div class="bottom">
+                <h5>스티커 부착</h5>
+                <span>스티커 신청 후,<br />차량에 스티커 배치</span>
+              </div>
+            </div>
+            <div class="arrow second-arrow">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="17"
+                viewBox="0 0 12 17"
+                fill="none"
+              >
+                <path
+                  d="M1.31222e-06 2.8867L1.80296e-06 14.1134C-0.000645723 14.5566 0.125401 14.9909 0.363554 15.3661C0.601706 15.7413 0.942226 16.042 1.3457 16.2334C1.82442 16.4574 2.35703 16.5437 2.88285 16.4824C3.40866 16.4211 3.90652 16.2147 4.31969 15.8867L11.1827 10.2734C11.4393 10.0531 11.645 9.78072 11.786 9.47476C11.927 9.1688 12 8.83638 12 8.50003C12 8.16368 11.927 7.83126 11.786 7.5253C11.645 7.21934 11.4393 6.94698 11.1827 6.7267L4.31969 1.11336C3.90652 0.785352 3.40866 0.578941 2.88285 0.517649C2.35703 0.456356 1.82442 0.542652 1.3457 0.766695C0.942226 0.958085 0.601706 1.25877 0.363553 1.63396C0.125401 2.00914 -0.000646252 2.44348 1.31222e-06 2.8867Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="step-item">
+              <p>Step 03</p>
+              <img
+                src="./assets/images/section4/step-03.png"
+                alt="스텝 안심통화 이미지"
+              />
+              <div class="bottom">
+                <h5>안심통화</h5>
+                <span>
+                  내 휴대폰 번호가 아닌,<br />
+                  안심번호로 안심통화!
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-box">
+            <p>
+              방금 통화한 차주와 재연결을 원할 시 1877-1875로 전화 연결 후, 음성
+              안내에 따라 1번을 누르면 방금 통화한 상대방과 다시 통화할 수
+              있습니다.
+            </p>
+            <span>* 최대 1시간 이내의 전화 이력에만 재발신이 가능합니다.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-05">
+      <div class="container">
+        <div class="title">
+          <h5>자주 묻는 질문</h5>
+        </div>
+
+        <div class="accordion">
+          <div class="accordion-item">
+            <div class="que">
+              <div>
+                <h1>Q</h1>
+                <p>회원가입은 어떻게 하나요?</p>
+              </div>
+              <button class="btn-accordion"></button>
+            </div>
+
+            <div class="anw">
+              <div>
+                <h1>A</h1>
+                <p>
+                  [무료 이용하기] 웹 화면 진입 후 하단의 [회원가입]을 통해
+                  회원가입 창에서 이름, 차량번호, 전화번호를 입력하면 회원가입이
+                  완료됩니다. 입력한 정보는 타인에게 노출되지 않고 통화 연결 시
+                  내부적으로만 사용되며, 자세한 내용은 개인정보처리방침에서 확인
+                  가능합니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="que">
+              <div>
+                <h1>Q</h1>
+                <p>등록된 차량번호를 변경할 수 있나요?</p>
+              </div>
+              <button class="btn-accordion"></button>
+            </div>
+
+            <div class="anw">
+              <div>
+                <h1>A</h1>
+                <p>
+                  네, 가능합니다. 다만, 해당 기능은 개발 중이므로 현재는
+                  불가능하며 추후 오픈 예정입니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="que">
+              <div>
+                <h1>Q</h1>
+                <p>내 연락처를 변경할 수 있나요?</p>
+              </div>
+              <button class="btn-accordion"></button>
+            </div>
+
+            <div class="anw">
+              <div>
+                <h1>A</h1>
+                <p>
+                  네, 가능합니다. 로그인 후 하단의 [정보 변경]을 통해 연락처를
+                  변경할 수 있습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="que">
+              <div>
+                <h1>Q</h1>
+                <p>하나의 차량에 연락처를 여러 개 등록할 수 있나요?</p>
+              </div>
+              <button class="btn-accordion"></button>
+            </div>
+
+            <div class="anw">
+              <div>
+                <h1>A</h1>
+                <p>
+                  네, 한 차량당 최대 3개까지 연락처 등록이 가능합니다. 로그인 후
+                  하단의 [정보 변경] > [사용자 추가]를 선택하면 언제든지
+                  연락처를 추가/삭제할 수 있습니다. 등록된 사용자 중 대표 사용자
+                  선택을 통해 안심통화를 수신 받을 대표 연락처를 설정할 수
+                  있습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="que">
+              <div>
+                <h1>Q</h1>
+                <p>
+                  모두 동일한 전화번호(1877-1875)로 어떻게 상대방이 나에게
+                  연결할 수 있나요?
+                </p>
+              </div>
+              <button class="btn-accordion"></button>
+            </div>
+
+            <div class="anw">
+              <div>
+                <h1>A</h1>
+                <p>
+                  1877-1875 스마트 안심번호로 전화 연결 시, 음성 안내에 따라
+                  회원가입 된 차량번호를 입력하기 때문에 동일한 번호를
+                  사용하더라도 사용자를 식별할 수 있습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="que">
+              <div>
+                <h1>Q</h1>
+                <p>방금 통화한 상대방과 다시 통화할 수 있나요?</p>
+              </div>
+              <button class="btn-accordion"></button>
+            </div>
+
+            <div class="anw">
+              <div>
+                <h1>A</h1>
+                <p>
+                  네, 가능합니다. 1877-1875로 전화 연결 후, 음성 안내에 따라
+                  [1번]을 누르면 방금 통화한 상대방과 다시 통화할 수 있습니다.
+                  단, 최대 1시간 이내의 전화 이력에만 재발신이 가능합니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="que">
+              <div>
+                <h1>Q</h1>
+                <p>부재중 전화가 표시되었어요. 다시 통화할 수 있나요?</p>
+              </div>
+              <button class="btn-accordion"></button>
+            </div>
+
+            <div class="anw">
+              <div>
+                <h1>A</h1>
+                <p>
+                  네, 가능합니다. 부재중 전화(1877-1875)로 전화 연결 후, 음성
+                  안내에 따라 [1번]을 누르면 발신자와 통화할 수 있습니다. 단,
+                  최대 1시간 이내의 전화 이력에만 재발신이 가능합니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="que">
+              <div>
+                <h1>Q</h1>
+                <p>이전에 통화한 상대방과 언제까지 통화할 수 있나요?</p>
+              </div>
+              <button class="btn-accordion"></button>
+            </div>
+
+            <div class="anw">
+              <div>
+                <h1>A</h1>
+                <p>
+                  마지막 통화 시점으로부터 최대 1시간 이내로 전화 연결이
+                  가능합니다.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="que">
+              <div>
+                <h1>Q</h1>
+                <p>별도의 요금이 부과되지는 않나요?</p>
+              </div>
+              <button class="btn-accordion"></button>
+            </div>
+
+            <div class="anw">
+              <div>
+                <h1>A</h1>
+                <p>
+                  서비스 이용 시 기본 통화요금 이외 별도의 요금이 부과되지
+                  않습니다. 현재 스마트 안심번호 서비스는 가입 후 1년간 무료로
+                  이용 가능합니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="background">Q&A</h1>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-logo">
+          <img src="./assets/images/footer-logo.svg" alt="" />
+        </div>
+
+        <div class="footet-content">
+          <div class="footer-left">
+            <p>라온시큐어(주)</p>
+          </div>
+
+          <div class="footer-right">
+            <div class="footer-group-wrap">
+              <div class="footer-item-group">
+                <div class="footer-item">
+                  <span>대표이사</span>
+                  <p>이순형·이정아</p>
+                </div>
+                <div class="footer-item">
+                  <span>사업자등록번호</span>
+                  <p>138-81-16484</p>
+                </div>
+              </div>
+
+              <div class="footer-item-group">
+                <div class="footer-item">
+                  <span>고객센터</span>
+                  <p>02-561-4545</p>
+                </div>
+                <div class="footer-item">
+                  <span>펙스</span>
+                  <p>02-565-5350</p>
+                </div>
+              </div>
+
+              <div class="footer-item-group">
+                <div class="footer-item">
+                  <a
+                    href="https://privacy.raoncorp.com/raonsecure/ko/web/privacy.html"
+                    target="_blank"
+                  >
+                    개인정보처리방침
+                  </a>
+                </div>
+                <div class="footer-item">
+                  <a href="./serviceTerms.html" target="_blank">
+                    서비스이용약관
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer-address">
+              <span>본사</span>
+              <p>
+                서울특별시 영등포구 여의대로 108,<br />
+                파크원타워2 47-48층(여의도동)
+              </p>
+            </div>
+
+            <div class="copyright">© RaonSecure. All rights reserved.</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script>
+    // 메인화면 이미지 인터렉션
+    window.addEventListener("load", () => {
+      const element = document.querySelectorAll(".background-img");
+      const elementArray = Array.from(element);
+
+      elementArray.forEach((items, idx) => {
+        setTimeout(() => {
+          items.classList.add("visible");
+        }, idx * 300);
+      });
+    });
+    // 해상도 변경에 따른 오브젝트 변경
+    window.addEventListener("load", () => {
+      const viewportWidth = window.innerWidth;
+      const background = document.querySelector(".background-01");
+      const contentBg = document.querySelector(".content-02");
+
+      if (viewportWidth >= 375 && viewportWidth <= 1023.98) {
+        background.src = "./assets/images/background-01-mo.png";
+        contentBg.src = "./assets/images/section3/content-02-mo.png";
+      }
+    });
+    // 헤더 스크롤 다운
+    window.addEventListener("scroll", () => {
+      const windowTop = window.scrollY;
+      const header = document.querySelector("header");
+      const headerHeight = header.offsetHeight;
+      const body = document.querySelector("body");
+      const section = document.querySelector("section");
+
+      const viewportWidth = window.innerWidth;
+
+      if (viewportWidth >= 375 && viewportWidth <= 1023.98) {
+        if (windowTop > 0) {
+          header.classList.add("fixed");
+          body.style.marginTop = headerHeight + "px";
+        }
+        if (windowTop < 10) {
+          header.classList.remove("fixed");
+          body.style.marginTop = "0px";
+        }
+      } else {
+        if (windowTop > headerHeight) {
+          header.classList.add("fixed");
+        } else {
+          header.classList.remove("fixed");
+        }
+      }
+    });
+    // 자주 묻는 질문 (아코디언 아이템)
+    const accordion = document.querySelectorAll(".accordion-item");
+    const accordionBtn = document.querySelector(".btn-accordion img");
+    for (let i = 0; i < accordion.length; i++) {
+      accordion[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+      });
+    }
+
+    // 이벤트 핸들
+    const handleCall = () => {
+      document.location.href = "tel:1877-1875";
+    };
+    const moveJoin = () => {
+      window.open("https://smartsafecall.com/parking/join");
+    };
+    const moveLogin = () => {
+      window.open("https://smartsafecall.com/parking");
+    };
+  </script>
+</html>

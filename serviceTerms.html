@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="generator" content="Aspose.Words for .NET 22.10.0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <title>서비스이용약관</title>
+
+    <style>
+      body {
+        font-size: 16px;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      #select {
+        width: 12rem;
+        height: 2.5rem;
+        padding: 0.5rem;
+        border: 1px solid #bbb;
+        border-radius: 0.25rem;
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
+      }
+
+      h5 {
+        font-size: 1.125rem;
+        margin-bottom: 0.75rem;
+      }
+
+      h6 {
+        font-size: 1rem;
+        margin-bottom: 0.75rem;
+      }
+
+      p {
+        font-size: 0.875rem;
+        line-height: 1.6;
+        margin-bottom: 0;
+        word-break: keep-all;
+      }
+      p.terms-title {
+        margin-top: 1rem;
+      }
+
+      ul,
+      li {
+        list-style: none;
+        font-size: 0.875rem;
+        padding-inline-start: 0.875rem;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      table {
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+        border: 0;
+        table-layout: fixed;
+        font-size: 0.875rem;
+      }
+
+      thead {
+        background: #eee;
+        font-weight: 600;
+      }
+
+      tbody {
+        color: #444;
+      }
+
+      tr,
+      td {
+        border: 1px solid #bbb;
+        padding: 0.5rem;
+      }
+
+      .strong {
+        font-weight: 600;
+      }
+
+      .underline {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          font-size: 2.04vw;
+          padding: 4.07vw;
+        }
+
+        #select {
+          width: 24.43vw;
+          height: 5.09vw;
+          padding: 1.02vw;
+          border-radius: 1.02vw;
+          font-size: 1.78vw;
+        }
+
+        h5 {
+          font-size: 2.29vw;
+          margin-bottom: 1.78vw;
+        }
+
+        h6 {
+          font-size: 2vw;
+          margin-bottom: 1.78vw;
+        }
+
+        p {
+          font-size: 1.78vw;
+        }
+
+        ul,
+        li {
+          font-size: 1.78vw;
+          padding-inline-start: 1.125vw;
+        }
+
+        table {
+          font-size: 1.78vw;
+        }
+
+        tr,
+        td {
+          padding: 1.02vw;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <select id="select" onchange="changeHtml()">
+      <option value="./serviceTerms_231201.html" selected>
+        2023년 12월 01일
+      </option>
+    </select>
+
+    <h5 class="strong">스마트 안심번호 서비스이용약관</h5>
+
+    <div id="contents"></div>
+  </body>
+</html>
+
+<script>
+  // HTML 파일을 변경하는 함수
+  function changeHtml() {
+    const selectedHtml = document.getElementById("select").value;
+
+    // XMLHttpRequest를 이용하여 선택한 HTML 파일을 비동기적으로 로드
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState == 4 && xhr.status == 200) {
+        // 로드가 완료되면 content div에 내용을 삽입
+        document.getElementById("contents").innerHTML = xhr.responseText;
+      }
+    };
+    xhr.open("GET", selectedHtml, true);
+    xhr.send();
+  }
+
+  // 페이지 로드 시 초기 HTML 파일 로드
+  window.onload = function () {
+    changeHtml();
+  };
+
+  // select 요소의 값이 변경될 때마다 changeHtml 함수 호출
+  document.getElementById("select").addEventListener("change", changeHtml);
+</script>
