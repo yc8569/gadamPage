@@ -61,8 +61,7 @@ body {
 /* 히어로 */
 .hero {
   height: 450px;
-  background: url("https://images.unsplash.com/photo-1604908176997-125f25cc6f3d")
-    center/cover no-repeat;
+  background: url("../images/mainGadam.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   padding-left: 40px;
@@ -404,6 +403,7 @@ footer {
   margin: 20px 0;
   line-height: 1.6;
   color: #e0e0e0;
+  font-weight: 500; /* 🔥 추가 */
 }
 
 .menu-point {
@@ -437,7 +437,60 @@ footer {
 /* ========================= */
 /* 🔥 STORE */
 /* ========================= */
+.store-grid {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
+.store-item {
+  flex: 1;
+  min-width: 260px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+
+  text-align: center;
+
+  border: 1px solid #eee;
+  transition: 0.3s;
+}
+
+/* 가운데 강조 */
+.store-item.main {
+  border: 2px solid #2f6f4e;
+  transform: scale(1.05);
+}
+
+/* hover */
+.store-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.store-item h3 {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.store-item p {
+  color: #666;
+  font-size: 14px;
+}
+
+.store-item ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.store-item li {
+  margin: 6px 0;
+  font-size: 14px;
+}
 .store-section {
   background: #f8f9fa;
 }
@@ -518,62 +571,94 @@ footer {
   }
 }
 /* ========================= */
-/* 🔥 CLIENT */
+/* 🔥 CLIENT SLIDER */
 /* ========================= */
 
 .client-section {
-  background: #f4f6f8;
+  padding: 0;
 }
 
-/* 숫자 */
-.client-stats {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin: 40px 0;
-  flex-wrap: wrap;
+.client-slider {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
 }
 
-.client-stats h3 {
-  font-size: 28px;
-  color: #2f6f4e;
+/* 슬라이드 */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
-.client-stats p {
-  margin-top: 5px;
-  color: #555;
-}
-
-/* 로고 */
-.client-logos {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-  margin: 30px 0;
-}
-
-.client-logos img {
-  filter: grayscale(100%);
-  opacity: 0.7;
-  transition: 0.3s;
-}
-
-.client-logos img:hover {
-  filter: grayscale(0%);
+.slide.active {
   opacity: 1;
 }
 
-/* 문구 */
-.client-desc {
+/* 어둡기 */
+.client-slider::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* 텍스트 */
+.client-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
   text-align: center;
-  margin-top: 20px;
-  color: #666;
+}
+
+.client-overlay h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.client-overlay p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* ========================= */
+/* 🔥 ABOUT (회사소개) */
+/* ========================= */
+
+.about {
+  background: #f9f9f9;
+}
+
+.about-wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.8;
+  font-size: 16px;
+  color: #444;
+}
+
+.about-wrap p {
+  margin-bottom: 20px;
 }
 
 /* 모바일 */
 @media (max-width: 768px) {
-  .client-stats {
-    gap: 20px;
+  .about-wrap {
+    font-size: 14px;
+    padding: 0 10px;
   }
 }
