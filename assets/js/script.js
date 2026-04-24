@@ -58,6 +58,6 @@ if (slides.length > 0) {
 
     slides[current].classList.add("active");
     text.innerText = messages[current];
-  }, 2500);
+  }, 1500);
 }
 // #endregion
