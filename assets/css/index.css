@@ -1,177 +1,62 @@
-body {
-  margin: 0;
-  /* font-family: Pretendard, sans-serif; */
-  font-family: "SUIT", sans-serif;
-  overflow-x: hidden; /* 🔥 추가 */
+/* ========================= */
+/* 🔥 RESET */
+/* ========================= */
+
+* {
+  box-sizing: border-box;
 }
+
 html,
 body {
+  margin: 0;
+  font-family: "SUIT", sans-serif;
+  background: #355f3b;
+  color: white;
   overflow-x: hidden;
 }
-/* 🔥 헤더 고급화 */
+
+/* ========================= */
+/* 🔥 HEADER */
+/* ========================= */
+
 .header {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 18px 20px; /* 🔥 40 → 20으로 변경 */
-  box-sizing: border-box; /* 🔥 추가 */
+  padding: 18px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background: transparent; /* 🔥 깔끔하게 */
   z-index: 100;
 }
 
 .logo {
   font-weight: bold;
   font-size: 20px;
-  letter-spacing: 1px;
 }
+
 .nav {
   display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap; /* 🔥 이게 핵심 */
 }
+
 .nav a {
   margin-left: 25px;
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  position: relative;
-}
-
-/* hover 효과 */
-.nav a::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background: #2f6f4e;
-  transition: 0.3s;
-}
-
-.nav a:hover::after {
-  width: 100%;
-}
-
-/* 히어로 */
-.hero {
-  height: 450px;
-  background: url("../images/mainGadam.jpg") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  padding-left: 40px;
-  margin-top: 80px;
-  position: relative;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-}
-
-.hero-text {
-  position: relative;
   color: white;
 }
 
-/* 섹션 */
-.section {
-  padding: 60px 15px;
-}
-
-@media (max-width: 768px) {
-  .section {
-    padding: 40px 15px; /* 🔥 모바일 줄이기 */
-  }
-}
-.center {
-  text-align: center;
-}
-
-/* 이미지 카드 느낌 */
-.menu-wrap {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin: 30px 0;
-}
-
-.menu-wrap img {
-  width: 220px;
-  border-radius: 16px;
-  transition: 0.3s;
-}
-
-.menu-wrap img:hover {
-  transform: scale(1.05);
-}
-
-/* 매장 이미지 */
-.store-img {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  border-radius: 16px;
-  margin-top: 20px;
-}
-
-/* 플로팅 */
-.floating {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.float-btn {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.call {
-  background: #333;
-  color: white;
-}
-.kakao {
-  background: #fee500;
-  color: black;
-}
-.add {
-  background: #2f6f4e;
-  color: white;
-}
-.top {
-  background: #888;
-  color: white;
-}
-/* ========================= */
-/* 🔥 모바일 메뉴 완성 */
-/* ========================= */
-
-/* 기본은 PC */
+/* 모바일 */
 .menu-toggle {
   display: none;
 }
 
-/* 모바일 */
 @media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+
   .menu-toggle {
     display: block;
   }
@@ -179,21 +64,243 @@ body {
   .nav {
     display: none;
     flex-direction: column;
+    background: white;
     position: absolute;
     top: 70px;
     right: 0;
-    width: 220px;
-    background: white;
+    width: 200px;
     padding: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   }
 
   .nav a {
+    color: #333;
     margin: 10px 0;
   }
 
   .nav.active {
     display: flex;
+  }
+}
+
+/* ========================= */
+/* 🔥 HERO */
+/* ========================= */
+
+.hero {
+  padding: 100px 20px 50px;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  letter-spacing: 6px; /* PC용 */
+}
+
+.hero-text h2 {
+  margin-bottom: 15px;
+  font-size: 26px;
+  margin-top: 10px;
+}
+
+.hero-text p {
+  margin-top: 10px;
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 20px 40px;
+  }
+
+  .hero-text h1 {
+    font-size: 22px;
+    letter-spacing: 2px; /* 🔥 핵심 */
+  }
+
+  .hero-text h2 {
+    font-size: 18px;
+  }
+}
+
+/* ========================= */
+/* 🔥 HERO IMAGE */
+/* ========================= */
+
+.hero-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin: 20px 0;
+}
+
+/* ========================= */
+/* 🔥 BRAND */
+/* ========================= */
+
+.brand-section {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.brand-title {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.brand-title span {
+  font-size: 16px;
+  opacity: 0.6;
+  margin-left: 8px;
+}
+
+/* ========================= */
+/* 🔥 REASON */
+/* ========================= */
+
+.reason-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; /* 🔥 핵심 */
+  align-items: center;
+  gap: 80px;
+}
+
+.reason-img img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+}
+
+.reason-content h2 {
+  font-size: 32px;
+
+  text-align: left; /* 유지 */
+  margin-bottom: 40px;
+}
+
+.reason-item {
+  margin-bottom: 40px;
+}
+
+.reason-item span {
+  color: #f4c542;
+  font-size: 14px;
+}
+
+.reason-item h3 {
+  margin: 15px 0 10px;
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .reason-wrap {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ========================= */
+/* 🔥 MENU SECTION */
+/* ========================= */
+
+.menu-section {
+  background: url("../images/background-05.png") center/cover no-repeat;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden; /* 🔥 이거 없으면 삐져나옴 */
+}
+.menu-card {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+.menu-section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0; /* 🔥 핵심 */
+}
+
+.menu-overlay {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.menu-type {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.menu-title {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+/* 카드 영역 */
+.menu-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* 카드 */
+.menu-card {
+  background: #eee;
+  border-radius: 20px;
+  padding: 30px;
+  width: 320px;
+  text-align: center;
+  color: #222;
+}
+
+/* 이미지 (타원🔥) */
+.menu-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50% / 40%; /* 🔥 핵심 */
+  margin-bottom: 20px;
+}
+
+/* 텍스트 */
+.menu-card h3 {
+  margin-bottom: 10px;
+}
+
+.menu-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.menu-card strong {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.menu-card ul {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+.menu-card li {
+  margin-bottom: 5px;
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .menu-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-card {
+    width: 90%;
   }
 }
 /* ========================= */
@@ -204,476 +311,380 @@ body {
   background: #111;
   color: #aaa;
   padding: 40px 20px;
-  font-size: 14px;
 }
 
 .footer-wrap {
-  max-width: 1200px;
-  margin: auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
-.footer-left h3 {
-  color: white;
-  margin-bottom: 10px;
-}
-
-.footer-left p {
-  margin: 5px 0;
-}
-
-.footer-right {
-  text-align: right;
-}
-
-.footer-right p {
-  margin: 5px 0;
-}
-
-.footer .privacy {
-  cursor: pointer;
-  color: #ccc;
-  transition: 0.3s;
-}
-
-.footer .privacy:hover {
-  color: #ff6b00;
-}
-
-/* 모바일 */
-@media (max-width: 768px) {
-  .footer-wrap {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .footer-right {
-    text-align: left;
-  }
-}
-footer {
-  margin-top: 0;
-}
 /* ========================= */
-/* 🔥 NOTICE (가담 알림) */
-/* ========================= */
-.notice {
-  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
-  position: relative;
-}
-
-.notice::before {
-  content: "";
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  background: #2f6f4e;
-  opacity: 0.05;
-  border-radius: 50%;
-  top: 50px;
-  left: -50px;
-}
-#client {
-  background: #f4f6f8;
-}
-.notice-wrap {
-  max-width: 1200px;
-  margin: 50px auto 0;
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.notice-card {
-  width: 100%;
-  max-width: 320px;
-  background: #fff;
-  border-radius: 20px;
-  overflow: hidden;
-  text-align: center;
-  padding-bottom: 20px;
-  transition: all 0.4s ease; /* 🔥 변경 */
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  cursor: pointer; /* 🔥 추가 */
-}
-
-.notice-card img {
-  width: 100%;
-  height: auto; /* 🔥 변경 */
-  object-fit: contain; /* 🔥 변경 */
-}
-.notice-card:hover {
-  transform: translateY(-12px) scale(1.02); /* 🔥 변경 */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12); /* 🔥 추가 */
-}
-.notice-card:hover img {
-  transform: scale(1.1);
-}
-.fade-up {
-  opacity: 0;
-  transform: translateY(50px) scale(0.95); /* 🔥 변경 */
-  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); /* 🔥 변경 */
-}
-.fade-up.show {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-.notice-card .num {
-  display: block;
-  margin-top: 15px;
-  color: #2f6f4e;
-  font-weight: bold;
-  font-size: 14px;
-  letter-spacing: 2px;
-  transition: 0.3s;
-}
-
-.notice-card:hover .num {
-  transform: scale(1.2);
-  color: #ff6b00;
-}
-.notice-card .num {
-  display: block;
-  margin-top: 15px;
-  color: #2f6f4e;
-  font-weight: bold;
-}
-
-.notice-card h3 {
-  margin: 10px 0;
-  font-size: 18px;
-}
-
-.notice-card p {
-  font-size: 14px;
-  color: #777;
-  padding: 0 15px;
-}
-
-/* 🔥 모바일 */
-@media (max-width: 768px) {
-  .notice-wrap {
-    gap: 20px;
-  }
-
-  .notice-card img {
-    height: 180px;
-  }
-}
-/* ========================= */
-/* 🔥 MENU SECTION */
+/* 🔥 REVIEW SECTION */
 /* ========================= */
 
-.menu-section {
-  background: #2f6f4e;
-  background-image:
-    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.05), transparent),
-    radial-gradient(circle at 80% 80%, rgba(0, 0, 0, 0.1), transparent);
-  color: white;
-}
-
-.menu-block {
-  max-width: 1100px;
-  margin: 0 auto 80px;
+.review-section {
+  padding: 120px 20px;
   text-align: center;
 }
 
-.menu-images {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin: 30px 0;
-  flex-wrap: wrap;
-}
-
-.menu-images img {
-  width: 100%;
-  max-width: 320px;
-  border-radius: 20px;
-  transition: 0.4s;
-}
-
-.menu-images img:hover {
-  transform: scale(1.05);
-}
-
-.menu-desc {
-  margin: 20px 0;
-  line-height: 1.6;
-  color: #e0e0e0;
-  font-weight: 500; /* 🔥 추가 */
-}
-
-.menu-point {
-  margin-top: 20px;
-}
-
-.menu-point h4 {
+.review-sub {
+  font-size: 14px;
+  opacity: 0.7;
   margin-bottom: 10px;
 }
 
-.menu-point ul {
-  list-style: none;
-  padding: 0;
+.review-title {
+  font-size: 42px;
+  margin-bottom: 30px;
 }
 
-.menu-point li {
-  margin: 5px 0;
+.review-desc {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  line-height: 1.8;
+  font-size: 15px;
   opacity: 0.9;
 }
 
-/* 모바일 */
-@media (max-width: 768px) {
-  .menu-block {
-    margin-bottom: 50px;
-  }
-
-  .menu-images img {
-    max-width: 100%;
-  }
-}
-/* ========================= */
-/* 🔥 STORE */
-/* ========================= */
-.store-grid {
-  max-width: 1100px;
-  margin: 40px auto 0;
+/* 카드 영역 */
+.review-wrap {
   display: flex;
-  gap: 20px;
   justify-content: center;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
-.store-item {
-  flex: 1;
-  min-width: 260px;
-  background: #fff;
-  padding: 25px;
-  border-radius: 16px;
-
-  text-align: center;
-
-  border: 1px solid #eee;
-  transition: 0.3s;
-}
-
-/* 가운데 강조 */
-.store-item.main {
-  border: 2px solid #2f6f4e;
-  transform: scale(1.05);
-}
-
-/* hover */
-.store-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-.store-item h3 {
-  margin-bottom: 10px;
-  font-weight: 700;
-}
-
-.store-item p {
-  color: #666;
-  font-size: 14px;
-}
-
-.store-item ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 10px;
-}
-
-.store-item li {
-  margin: 6px 0;
-  font-size: 14px;
-}
-.store-section {
-  background: #f8f9fa;
-}
-
-.store-wrap {
-  max-width: 1100px;
-  margin: 40px auto 0;
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  flex-wrap: wrap;
-
-  background: white; /* 🔥 추가 */
-  padding: 30px; /* 🔥 추가 */
-  border-radius: 20px; /* 🔥 추가 */
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08); /* 🔥 핵심 */
-}
-
-.store-img-box {
-  flex: 1;
-  min-width: 300px;
-}
-
-.store-img-box img {
-  width: 100%;
+/* 카드 */
+.review-card {
+  width: 260px;
+  height: 360px;
   border-radius: 20px;
-  transition: 0.4s;
-}
-
-.store-img-box img:hover {
-  transform: scale(1.03);
-}
-
-.store-info {
-  flex: 1;
-  min-width: 300px;
-}
-
-.store-info h3 {
-  margin-bottom: 15px;
-}
-
-.store-info p {
-  margin: 10px 0;
-  color: #444;
-  font-size: 15px;
-}
-.store-info h3 {
-  font-size: 22px;
-  margin-bottom: 15px;
-}
-.store-btns {
-  margin-top: 20px;
-  display: flex;
-  gap: 10px;
-}
-
-.store-btns button {
-  padding: 12px 18px;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  background: linear-gradient(135deg, #2f6f4e, #1e4d38); /* 🔥 */
-  color: white;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.store-btns button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* 모바일 */
-@media (max-width: 768px) {
-  .store-wrap {
-    flex-direction: column;
-  }
-}
-/* ========================= */
-/* 🔥 CLIENT SLIDER */
-/* ========================= */
-
-.client-section {
-  padding: 0;
-}
-
-.client-slider {
-  position: relative;
-  width: 100%;
-  height: 500px;
   overflow: hidden;
+  position: relative;
 }
 
-/* 슬라이드 */
-.slide {
-  position: absolute;
+/* 이미지 */
+.review-card img {
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
-
-  opacity: 0;
-  transition: opacity 1s ease;
+  object-fit: cover;
 }
 
-.slide.active {
-  opacity: 1;
+/* hover 효과 */
+.review-card {
+  transition: all 0.3s ease;
 }
 
-/* 어둡기 */
-.client-slider::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.3);
+.review-card:hover {
+  transform: translateY(-10px);
+}
+/* ========================= */
+/* 🔥 PARTNER SECTION */
+/* ========================= */
+
+.partner-section {
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.partner-title {
+  font-size: 36px;
+  margin-bottom: 60px;
+}
+
+/* 2열 그리드 */
+.partner-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* 아이템 */
+.partner-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+}
+
+/* 이미지 */
+.partner-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
 /* 텍스트 */
-.client-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
+.partner-item h3 {
+  margin-bottom: 8px;
+}
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.partner-item p {
+  font-size: 14px;
+  opacity: 0.8;
+  margin: 2px 0;
+}
+.partner-item {
+  transition: all 0.3s ease;
+}
 
-  color: white;
+.partner-item:hover {
+  transform: translateY(-5px);
+}
+.partner-section {
+  background: #4a524a; /* 쥐색 */
+}
+/* ========================= */
+/* 🔥 PROCESS SECTION */
+/* ========================= */
+
+.process-section {
+  padding: 120px 20px;
   text-align: center;
 }
 
-.client-overlay h2 {
-  font-size: 32px;
-  font-weight: 700;
+/* 제목 */
+.process-top h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
 }
 
-.client-overlay p {
-  margin-top: 10px;
-  font-size: 16px;
-}
-
-/* ========================= */
-/* 🔥 ABOUT (회사소개) */
-/* ========================= */
-
-.about {
-  background: #f9f9f9;
-}
-
-.about-wrap {
+/* 회색 박스 */
+.process-box {
+  background: #ddd;
+  color: #222;
+  padding: 25px;
+  border-radius: 12px;
   max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  line-height: 1.8;
-  font-size: 16px;
-  color: #444;
+  margin: 0 auto 80px;
 }
 
-.about-wrap p {
+.process-box .bold {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* STEP 전체 */
+.process-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+/* 개별 STEP */
+.process-item {
+  text-align: left;
+  position: relative;
+}
+
+/* step 숫자 */
+.process-item span {
+  color: #f4c542;
+  font-size: 14px;
+}
+
+/* 구분선 */
+.process-item::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 15px 0;
+}
+
+/* 제목 */
+.process-item h3 {
+  margin-bottom: 10px;
+}
+
+/* 내용 */
+.process-item p {
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* ========================= */
+/* 🔥 모바일 */
+/* ========================= */
+
+@media (max-width: 768px) {
+  .process-wrap {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .process-item {
+    text-align: center;
+  }
+}
+/* ========================= */
+/* 🔥 TEAM (조직도) */
+/* ========================= */
+
+.team-section {
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.team-title {
+  font-size: 36px;
+  margin-bottom: 80px;
+}
+
+/* 카드 전체 */
+.team-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* 카드 */
+.team-card {
+  background: #eee;
+  color: #222;
+  border-radius: 20px;
+  padding: 30px;
+  width: 320px;
+  text-align: center;
+}
+
+/* 제목 */
+.team-card h3 {
   margin-bottom: 20px;
 }
 
-/* 모바일 */
+/* 대표 강조 */
+.team-card .highlight {
+  background: #f4c542;
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+/* 이미지 */
+.team-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* 내용 */
+.team-card p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ========================= */
+/* 🔥 모바일 */
+/* ========================= */
+
 @media (max-width: 768px) {
-  .about-wrap {
-    font-size: 14px;
-    padding: 0 10px;
+  .team-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-card {
+    width: 90%;
   }
 }
-.client-text-box {
-  text-align: center;
-  margin: 30px 0;
+/* ========================= */
+/* 🔥 FOOTER (완성형) */
+/* ========================= */
+
+.footer {
+  background: #2b2b2b;
+  padding: 80px 20px;
 }
 
-.client-text-box h2 {
-  font-size: 28px;
-  font-weight: 700;
+.footer-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center; /* 🔥 핵심 */
 }
 
-.client-text-box p {
-  margin-top: 10px;
-  color: #666;
+/* 제목 */
+.footer-inner h3 {
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* 텍스트 */
+.footer-inner p {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #ccc;
+}
+
+/* 구분선 */
+.footer-line {
+  width: 60px;
+  height: 1px;
+  background: #555;
+  margin: 30px auto;
+}
+
+/* 카피라이트 */
+.copy {
+  font-size: 13px;
+  color: #888;
+}
+/* ========================= */
+/* 🔥 FLOATING FIX (확정) */
+/* ========================= */
+
+.floating {
+  position: fixed;
+  right: 20px;
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999; /* 🔥 올림 */
+}
+
+.float-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 26px; /* 🔥 키움 */
+
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); /* 🔥 강화 */
+}
+
+/* 색 확실하게 */
+.call {
+  background: #000;
+  color: #fff;
+}
+
+.kakao {
+  background: #ffe812;
+  color: #000;
+}
+
+.add {
+  background: #ff7a00; /* 🔥 완전 눈에 띄게 */
+  color: #fff;
+}
+
+.top {
+  background: #fff;
+  color: #000;
 }

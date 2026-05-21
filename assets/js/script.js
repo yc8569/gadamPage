@@ -1,3 +1,4 @@
+// #region FADE-UP 애니메이션
 const elements = document.querySelectorAll(".fade-up");
 
 const observer = new IntersectionObserver((entries) => {
@@ -9,39 +10,34 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 elements.forEach((el) => observer.observe(el));
+// #endregion
 
-// 메뉴 토글
-document.getElementById("menuToggle").onclick = () => {
-  document.getElementById("navMenu").classList.toggle("active");
-};
+// #region 메뉴 토글
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
 
-// 맨 위
-document.getElementById("topBtn").onclick = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
-const counters = document.querySelectorAll(".client-stats h3");
-
-counters.forEach((counter) => {
-  let target = +counter.innerText.replace(/\D/g, "");
-  let count = 0;
-
-  const update = () => {
-    count += Math.ceil(target / 30);
-    if (count > target) count = target;
-
-    counter.innerText = count + "+";
-    if (count < target) requestAnimationFrame(update);
+if (menuToggle && navMenu) {
+  menuToggle.onclick = () => {
+    navMenu.classList.toggle("active");
   };
+}
+// #endregion
 
-  update();
-});
+// #region 맨 위 버튼
+const topBtn = document.getElementById("topBtn");
+
+if (topBtn) {
+  topBtn.onclick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+}
+// #endregion
+
 // #region CLIENT SLIDER
 const slides = document.querySelectorAll(".slide");
 const text = document.getElementById("clientText");
 
-if (slides.length > 0) {
-  // 🔥 이거 중요 (에러 방지)
-
+if (slides.length > 0 && text) {
   const messages = [
     "어린이 돌봄센터 점심 제공",
     "기업 단체 도시락 납품",
@@ -58,6 +54,6 @@ if (slides.length > 0) {
 
     slides[current].classList.add("active");
     text.innerText = messages[current];
-  }, 1500);
+  }, 2000);
 }
 // #endregion
