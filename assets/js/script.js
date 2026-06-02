@@ -13,14 +13,14 @@ elements.forEach((el) => observer.observe(el));
 // #endregion
 
 // #region 메뉴 토글
-const menuToggle = document.getElementById("menuToggle");
-const navMenu = document.getElementById("navMenu");
+// const menuToggle = document.getElementById("menuToggle");
+// const navMenu = document.getElementById("navMenu");
 
-if (menuToggle && navMenu) {
-  menuToggle.onclick = () => {
-    navMenu.classList.toggle("active");
-  };
-}
+// if (menuToggle && navMenu) {
+//   menuToggle.onclick = () => {
+//     navMenu.classList.toggle("active");
+//   };
+// }
 // #endregion
 
 // #region 맨 위 버튼
