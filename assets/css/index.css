@@ -33,6 +33,27 @@ img {
 section {
   width: 100%;
 }
+/* ================================= */
+/* 🔥 SECTION TITLE (통일) */
+/* ================================= */
+
+.section-title {
+  font-size: clamp(32px, 4vw, 64px);
+  font-weight: 300;
+  letter-spacing: -1px;
+  margin-bottom: 60px;
+}
+/* ================================= */
+/* 🔥 SECTION SUB TITLE (통일) */
+/* ================================= */
+
+.section-sub {
+  font-size: clamp(14px, 1.2vw, 18px);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
 
 /* ================================= */
 /* 🔥 HEADER (최종 완성본) */
@@ -60,13 +81,19 @@ section {
 
 /* 로고 */
 .logo {
+  font-family: "Nanum Pen Script", cursive;
   position: absolute;
   left: 50px;
 
-  font-size: clamp(20px, 2vw, 34px);
-  font-weight: 700;
-}
+  letter-spacing: 2px;
 
+  font-size: clamp(40px, 4.5vw, 60px);
+  font-weight: 900;
+}
+.logo2 {
+  font-family: "Gowun Dodum", sans-serif;
+  font-size: 30px;
+}
 /* 메뉴 */
 .nav {
   display: flex;
@@ -104,12 +131,6 @@ section {
   opacity: 0.8;
 }
 
-/* ========================= */
-/* 🔥 MOBILE (완전 수정버전) */
-/* ========================= */
-
-@media (max-width: 768px) {
-}
 /* ================================= */
 /* HERO */
 /* ================================= */
@@ -153,6 +174,7 @@ section {
 /* ================================= */
 
 .brand-section {
+  font-family: "Noto Serif KR", serif;
   padding: 120px 20px;
   text-align: center;
 }
@@ -251,8 +273,10 @@ section {
 /* ================================= */
 
 .menu-section {
+  font-family: "Pretendard", sans-serif;
   padding: 140px 20px;
   text-align: center;
+  background: url("../images/menu/back-type.JPG") center/cover no-repeat;
 }
 
 /* 타입 */
@@ -352,6 +376,7 @@ section {
 /* ================================= */
 
 .review-section {
+  font-family: "Playfair Display", serif;
   padding: 140px 20px;
   text-align: center;
 }
@@ -445,13 +470,14 @@ section {
   margin-bottom: 10px;
 }
 /* ================================= */
-/* PROCESS */
+/* PROCESS (완성본) */
 /* ================================= */
 
 .process-section {
   padding: 140px 20px;
 }
 
+/* 상단 */
 .process-top h2 {
   text-align: center;
   font-size: 72px;
@@ -459,6 +485,7 @@ section {
   margin-bottom: 50px;
 }
 
+/* 안내 박스 */
 .process-box {
   background: #efefef;
   color: #222;
@@ -476,6 +503,10 @@ section {
   font-weight: 700;
 }
 
+/* ========================= */
+/* 🔥 핵심 구조 */
+/* ========================= */
+
 .process-wrap {
   max-width: 1200px;
   margin: 0 auto;
@@ -483,38 +514,50 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 60px;
+
+  align-items: stretch; /* 🔥 핵심 */
 }
 
+/* 카드 */
 .process-item {
-  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 200px; /* 🔥 핵심 (height ❌ → min-height ⭕) */
 }
 
-.process-item span {
+/* step */
+.step {
   color: #f4c542;
+  font-size: 14px;
+  margin-bottom: 5px;
 }
 
-.process-item::after {
-  content: "";
-  display: block;
+/* 제목 */
+.process-item h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+/* 내용 */
+.process-item p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* 🔥 줄 (이거 하나만 사용) */
+.process-line {
+  width: 100%;
   height: 1px;
-  margin: 15px 0;
   background: rgba(255, 255, 255, 0.3);
 }
-
-.process-item h3 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-.process-item p {
-  font-size: 20px;
-  line-height: 1.8;
-}
 /* ========================= */
-/* 🔥 TEAM SECTION */
+/* 🔥 TEAM SECTION (최종 완성본) */
 /* ========================= */
 
 .team-section {
+  font-family: "Pretendard", sans-serif;
   padding: 120px 20px;
   text-align: center;
 }
@@ -530,7 +573,7 @@ section {
 .team-wrap {
   display: flex;
   justify-content: center;
-  align-items: stretch; /* 🔥 카드 높이 맞추기 */
+  align-items: stretch;
   gap: 50px;
 }
 
@@ -541,16 +584,15 @@ section {
   padding: 30px;
 
   width: 340px;
-  height: 460px;
+  min-height: 460px; /* 🔥 핵심 변경 */
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 
   color: #222;
 
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* 🔥 고급 느낌 */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
 }
 
@@ -559,50 +601,92 @@ section {
   transform: translateY(-8px);
 }
 
-/* 제목 */
-.team-card h3 {
-  font-size: 22px;
-  margin-bottom: 12px;
-  text-align: center;
-  font-weight: 600;
-}
+/* ========================= */
+/* 🔥 제목 영역 (완전 통일) */
+/* ========================= */
 
-/* 강조 제목 */
+.team-card h3,
 .team-card .highlight {
-  font-size: 16px;
-  background: #ffd84d;
-  padding: 6px 10px;
-  border-radius: 6px;
-  display: inline-block;
+  font-size: 22px;
+  font-weight: 700;
+
+  height: 50px; /* 🔥 핵심 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 15px;
+  text-align: center;
 }
 
-/* 이미지 */
+/* 대표 */
+.team-card .highlight {
+  font-size: 18px;
+  background: #ffd84d;
+  border-radius: 6px;
+}
+
+/* ========================= */
+/* 🔥 이미지 영역 (완전 통일) */
+/* ========================= */
+
 .team-card img {
   width: 100%;
-  height: 170px;
+  height: 180px; /* 🔥 통일 */
   object-fit: cover;
   border-radius: 12px;
+
+  margin-bottom: 15px;
 }
 
-/* 텍스트 */
+/* ========================= */
+/* 🔥 텍스트 */
+/* ========================= */
+
 .team-card p {
   font-size: 15px;
-  line-height: 1.7;
-  margin-top: 12px;
+  line-height: 1.6;
+
+  margin: 0 auto;
+  max-width: 260px; /* 🔥 줄바꿈 통일 */
+  text-align: center;
 
   word-break: keep-all;
 }
 
-/* 강조 문구 */
+/* 강조 */
 .team-card strong {
   font-size: 15px;
   font-weight: 600;
 }
-/* 모바일 */
+
+/* ========================= */
+/* 🔥 MOBILE */
+/* ========================= */
+
 @media (max-width: 768px) {
+  .team-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .team-card {
     width: 90%;
-    height: auto; /* 🔥 모바일은 자연스럽게 */
+    min-height: auto;
+  }
+
+  /* 🔥 여기부터 추가 */
+  .partner-item h3,
+  .partner-item p {
+    word-break: keep-all;
+  }
+
+  .partner-item h3 {
+    font-size: 18px;
+  }
+
+  .partner-item p {
+    font-size: 14px;
   }
 }
 /* ================================= */
@@ -615,9 +699,12 @@ section {
 }
 
 .footer-inner {
+  text-align: left; /* 🔥 핵심 */
   max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
+  /* margin: 0 auto; */
+  text-align: left;
+  margin: 4px 0;
+  font-size: 14px;
 }
 
 .footer-inner h3 {
@@ -633,6 +720,7 @@ section {
 }
 
 .footer-line {
+  text-align: left;
   width: 60px;
   height: 1px;
   background: #555;
@@ -839,10 +927,55 @@ section {
     font-size: 18px;
   }
 }
+
 /* ========================= */
-/* 🔥 TABLET */
+/* 🔥 LAPTOP (1400px 이하) */
 /* ========================= */
+@media (max-width: 1400px) {
+  /* REASON */
+  .reason-wrap {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .reason-img img {
+    height: 400px;
+  }
+
+  /* MENU */
+  .menu-wrap {
+    gap: 30px;
+  }
+
+  .menu-card {
+    width: 380px; /* 🔥 최적 */
+  }
+
+  /* REVIEW (🔥 4개 유지) */
+  .review-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .review-card {
+    width: 23%;
+    height: 320px;
+    min-width: 250px; /* 🔥 너무 작아지는거 방지 */
+  }
+
+  /* TEAM */
+  .team-wrap {
+    gap: 30px;
+  }
+
+  .team-card {
+    width: 300px;
+  }
+}
+
 @media (max-width: 1024px) {
+  /* HERO */
   .hero-text h1:first-child {
     font-size: 60px;
   }
@@ -851,19 +984,39 @@ section {
     font-size: 40px;
   }
 
-  .menu-card {
-    width: 420px;
+  /* MENU */
+  .menu-wrap {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .reason-wrap {
+  .menu-card {
+    width: 90%;
+  }
+
+  /* REVIEW */
+  .review-wrap {
+    display: grid;
     grid-template-columns: 1fr;
   }
 
+  .review-card {
+    width: 100%;
+    height: 350px;
+  }
+
+  /* PROCESS */
+  .process-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  /* PARTNER */
   .partner-wrap {
     grid-template-columns: 1fr;
   }
 
-  .process-wrap {
-    grid-template-columns: repeat(2, 1fr);
+  /* REASON */
+  .reason-wrap {
+    grid-template-columns: 1fr;
   }
 }

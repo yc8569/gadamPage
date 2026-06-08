@@ -4,10 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GADAM 도시락</title>
-
+    <!-- 1로고 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 2로고 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
+    <!-- 기본 -->
+    <link
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+      rel="stylesheet"
+    />
+
+    <!-- 감성 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- 고급 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap"
+      rel="stylesheet"
     />
 
     <link rel="stylesheet" href="assets/css/index.css" />
@@ -16,7 +42,8 @@
   <body>
     <!-- 헤더 -->
     <header class="header">
-      <div class="logo">가담</div>
+      <div class="logo">가 담</div>
+      <!-- <div class="logo2">가 담</div> -->
 
       <!-- <div class="menu-toggle" id="menuToggle">☰</div> -->
 
@@ -36,10 +63,10 @@
       </div>
     </section>
     <section class="hero-image">
-      <img src="assets/images/mainGadam11.jpg" alt="가담 도시락" />
+      <img src="assets/images/mainGadam11.JPG" alt="가담 도시락" />
     </section>
     <section class="brand-section fade-up">
-      <h3>Brand</h3>
+      <p class="section-sub">Brand</p>
 
       <h2 class="brand-title">가담 <span>(가득 담았습니다)</span></h2>
 
@@ -107,10 +134,11 @@
       </div>
     </section>
     <!--  -->
-    <section class="menu-section">
+    <section id="menu" class="menu-section">
       <div class="menu-overlay">
-        <p class="menu-type">Type</p>
-        <h2 class="menu-title">도시락 타입</h2>
+        <p class="section-sub">Type</p>
+        <h2 class="section-title">도시락 타입</h2>
+        <!-- <h2 class="menu-title">도시락 타입</h2> -->
 
         <div class="menu-wrap">
           <!-- A타입 -->
@@ -155,7 +183,7 @@
     <!-- Reviews -->
     <section class="review-section">
       <div class="review-header">
-        <p class="review-sub">Reviews</p>
+        <p class="section-sub">Reviews</p>
         <h2 class="review-title">함께했던 업체들의<br />솔직한 후기</h2>
 
         <p class="review-desc">
@@ -197,9 +225,9 @@
         <div class="partner-item">
           <img src="assets/images/logo_gadam1.jpg" />
           <div>
-            <h3>도봉 우리동네키움센터 1~8호점</h3>
-            <p>📍 서울특별시 도봉구</p>
-            <p>📞 02.</p>
+            <p class="partner-name">도봉 우리동네키움센터 1~8호점</p>
+            <p class="partner-address">📍 서울특별시 도봉구</p>
+            <p class="partner-phone">📞 02.</p>
           </div>
         </div>
 
@@ -207,9 +235,9 @@
         <div class="partner-item">
           <img src="assets/images/logo_gadam2.jpg" />
           <div>
-            <h3>다지기주간보호센터</h3>
-            <p>📍 서울특별시 노원구</p>
-            <p>📞 02.</p>
+            <p class="partner-name">다지기주간보호센터</p>
+            <p class="partner-address">📍 서울특별시 노원구</p>
+            <p class="partner-phone">📞 02.</p>
           </div>
         </div>
 
@@ -217,9 +245,9 @@
         <div class="partner-item">
           <img src="assets/images/logo_gadam3.jpg" />
           <div>
-            <h3>의정부 다함께돌봄센터 10호점</h3>
-            <p>📍 경기도 의정부시</p>
-            <p>📞 031.</p>
+            <p class="partner-name">의정부 다함께돌봄센터 10호점</p>
+            <p class="partner-address">📍 경기도 의정부시</p>
+            <p class="partner-phone">📞 031.</p>
           </div>
         </div>
 
@@ -227,16 +255,16 @@
         <div class="partner-item">
           <img src="assets/images/logo_gadam4.jpg" />
           <div>
-            <h3>노원 우리동네키움센터 거점1호점</h3>
-            <p>📍 서울특별시 노원구</p>
-            <p>📞 02.</p>
+            <p class="partner-name">노원 우리동네키움센터 거점1호점</p>
+            <p class="partner-address">📍 서울특별시 노원구</p>
+            <p class="partner-phone">📞 02.</p>
           </div>
         </div>
       </div>
     </section>
     <!--  -->
     <!--  -->
-    <section class="process-section">
+    <section id="process" class="process-section">
       <div class="process-top">
         <h2>신뢰로 시작하세요</h2>
 
@@ -249,80 +277,106 @@
       </div>
 
       <div class="process-wrap">
+        <!-- step 01 -->
         <div class="process-item">
-          <span>step 01.</span>
-          <h3>문의</h3>
-          <p>카카오채널, 네이버<br />인스타그램, 웹사이트<br />전화 문의</p>
+          <div>
+            <p class="step">step 01.</p>
+            <h3>문의</h3>
+            <p>카카오채널, 네이버<br />인스타그램, 웹사이트<br />전화 문의</p>
+          </div>
+          <div class="process-line"></div>
         </div>
 
+        <!-- step 02 -->
         <div class="process-item">
-          <span>step 02.</span>
-          <h3>현장 미팅</h3>
-          <p>
-            업체마다 요구되는 필요서류와 계약조건,<br />도시락 타입 미팅 진행
-          </p>
+          <div>
+            <p class="step">step 02.</p>
+            <h3>현장 미팅</h3>
+            <p>
+              업체마다 요구되는 필요서류와 계약조건,<br />도시락 타입 미팅 진행
+            </p>
+          </div>
+          <div class="process-line"></div>
         </div>
 
+        <!-- step 03 -->
         <div class="process-item">
-          <span>step 03.</span>
-          <h3>계약서 작성</h3>
-          <p>필요서류 제출 후 계약 진행</p>
+          <div>
+            <p class="step">step 03.</p>
+            <h3>계약서 작성</h3>
+            <p>필요서류 제출 후 계약 진행</p>
+          </div>
+          <div class="process-line"></div>
         </div>
 
+        <!-- step 04 -->
         <div class="process-item">
-          <span>step 04.</span>
-          <h3>도시락 시작</h3>
-          <p>계약기간 맞춰 운영 시작</p>
+          <div>
+            <p class="step">step 04.</p>
+            <h3>도시락 시작</h3>
+            <p>계약기간 맞춰 운영 시작</p>
+          </div>
+          <div class="process-line"></div>
         </div>
 
+        <!-- step 05 -->
         <div class="process-item">
-          <span>step 05.</span>
-          <h3>결제</h3>
-          <p>월말 기준 정산 진행</p>
+          <div>
+            <p class="step">step 05.</p>
+            <h3>결제</h3>
+            <p>월말 기준 정산 진행</p>
+          </div>
+          <div class="process-line"></div>
         </div>
       </div>
     </section>
     <!-- 조직도 -->
     <section class="team-section">
-      <h2 class="team-title">가담 조직도</h2>
+      <h2 class="team-title">가담 조직구성</h2>
 
       <div class="team-wrap">
         <!-- 창시자 -->
         <div class="team-card">
-          <h3>창시자</h3>
+          <h3>창업자</h3>
           <img src="assets/images/client/ceo1.jpg" alt="" />
           <p>
             현 가담대표의 부모님이자,<br />
             15년 경력으로 부산, 경남에서 다양한 유소년 스포츠팀,<br />
             각 종 단체 행사들의 식사 및 이동급식 도시락을<br />
             시작을 전문적으로 운영하셨습니다.<br /><br />
-
             “15년 내공이 담긴 든든한 한끼, 가담의 시작입니다”
           </p>
         </div>
 
         <!-- 대표 -->
         <div class="team-card">
-          <h3 class="highlight">현재 가담을 이끄는 젊은 대표</h3>
+          <h3 class="highlight">대표</h3>
           <img src="assets/images/client/ceo2.jpg" alt="" />
           <p>
+            변화에는 빠르게 대응하고, 운영은 더욱 탄탄하게<br />
+            젊은 감각과 풍분한 경험을 바탕으로<br />
+            젊은 인재들과 더 높은 미래를 향해 성장하고 있습니다.<br />
+
+            <!-- <strong>✔ 젊은 감각 + 노련한 운영능력</strong> -->
+          </p>
+          <!-- <p>
             도봉 우리동네키움센터 방학급식 계약체결<br />
             노원 우리동네키움센터 방학급식 계약체결<br />
             의정부 다함께돌봄센터 방학급식 계약체결<br />
             노원 다지기주간보호센터 평일도시락 계약체결<br /><br />
 
             <strong>✔ 젊은 감각 + 노련한 운영능력</strong>
-          </p>
+          </p> -->
         </div>
 
         <!-- 운영팀 -->
         <div class="team-card">
-          <h3>운영팀</h3>
+          <h3>운영본부</h3>
           <img src="assets/images/client/ceo3.jpg" alt="" />
           <p>
-            현장팀, 배달팀, 마케팅팀으로<br />
-            이루어져있으며, 각 팀의 팀장을 지휘 하에<br />
-            조직적으로 운영되고있습니다.
+            현장, 배달, 홍보 각 분야의 전문인력들이 <br />
+            팀장중심의 체계적인 운영 시스템 아래 유기적으로 <br />협업하고
+            있습니다.
           </p>
         </div>
       </div>
@@ -359,12 +413,12 @@
       <!-- 🔥 텍스트를 아래로 -->
     </section>
     <!-- 플로팅 -->
-    <div class="floating">
+    <!-- <div class="floating">
       <div class="float-btn call">📞</div>
       <div class="float-btn kakao">💬</div>
       <div class="float-btn add">⭐</div>
       <div class="float-btn top" id="topBtn">↑</div>
-    </div>
+    </div> -->
 
     <!-- 푸터 -->
     <footer class="footer">
@@ -381,7 +435,7 @@
 
         <p>Instagram @gadam_kor</p>
 
-        <div class="footer-line"></div>
+        <!-- <div class="footer-line"></div> -->
 
         <p class="copy">© 2026 GADAM. All rights reserved.</p>
       </div>
