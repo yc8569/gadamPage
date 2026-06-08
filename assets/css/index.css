@@ -1020,3 +1020,97 @@ section {
     grid-template-columns: 1fr;
   }
 }
+/* ========================= */
+/* 🔥 SCROLL ANIMATION */
+/* ========================= */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.9s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ========================= */
+/* 🔥 fade-left / fade-right */
+/* ========================= */
+
+.fade-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all 0.8s ease;
+}
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 0.8s ease;
+}
+
+.fade-left.show,
+.fade-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+/* ========================= */
+/* 🔥 버튼 클릭 효과 */
+/* ========================= */
+
+button:active,
+.float-btn:active {
+  transform: scale(0.95);
+}
+/* ========================= */
+/* 🔥 카드 hover */
+/* ========================= */
+
+.menu-card,
+.team-card,
+.review-card {
+  transition: all 0.3s ease;
+}
+
+.menu-card:hover,
+.team-card:hover,
+.review-card:hover {
+  transform: translateY(-10px); /* 🔥 위로 살짝 */
+}
+/* ========================= */
+/* 🔥 텍스트 hover */
+/* ========================= */
+
+.team-card p,
+.menu-card p {
+  transition: 0.3s;
+}
+
+.team-card:hover p,
+.menu-card:hover p {
+  transform: translateY(-3px);
+}
+/* ========================= */
+/* 🔥 라인 애니메이션 */
+/* ========================= */
+
+.process-line {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.6s ease;
+}
+
+.process-item.show .process-line {
+  transform: scaleX(1);
+}
+/* ========================= */
+/* 🔥 subtle glow */
+/* ========================= */
+
+.team-card:hover,
+.menu-card:hover {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 20px 40px rgba(0, 0, 0, 0.2);
+}

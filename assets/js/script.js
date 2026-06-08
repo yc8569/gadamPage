@@ -57,3 +57,21 @@ if (slides.length > 0 && text) {
   }, 2000);
 }
 // #endregion
+// #region FADE-UP 업그레이드
+window.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".fade-up");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add("show");
+        }, index * 120); // 🔥 순차 등장
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+
+  elements.forEach((el) => observer.observe(el));
+});
+// #endregion
