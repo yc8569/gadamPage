@@ -275,7 +275,7 @@ section {
 /* ================================= */
 
 .menu-section {
-  font-family: "Pretendard", sans-serif;
+  font-family: "Noto Serif KR", serif;
   padding: 140px 20px;
   text-align: center;
   background: url("../images/menu/back-type.JPG") center/cover no-repeat;
@@ -364,7 +364,7 @@ section {
 /* ================================= */
 
 .review-section {
-  font-family: "Playfair Display", serif;
+  font-family: "Noto Serif KR", serif;
   padding: 140px 20px;
   text-align: center;
 }
@@ -546,7 +546,7 @@ section {
 /* ========================= */
 
 .team-section {
-  font-family: "Pretendard", sans-serif;
+  font-family: "Noto Serif KR", serif;
   padding: 120px 20px;
   text-align: center;
 }
