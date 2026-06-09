@@ -357,20 +357,6 @@ section {
   font-size: clamp(13px, 1vw, 18px);
 }
 
-/* ========================= */
-/* 🔥 MOBILE 보정 */
-/* ========================= */
-@media (max-width: 768px) {
-  .menu-wrap {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .menu-card {
-    width: 90%;
-    padding: 30px;
-  }
-}
 /* ================================= */
 /* REVIEW */
 /* ================================= */
@@ -666,6 +652,25 @@ section {
 /* ========================= */
 
 @media (max-width: 768px) {
+  .reason-wrap {
+    display: flex !important; /* 🔥 grid 강제 제거 */
+    flex-direction: column !important; /* 🔥 세로 강제 */
+  }
+
+  .reason-img {
+    width: 100%;
+  }
+
+  .reason-img img {
+    width: 100%;
+    height: auto; /* 🔥 원본 비율 */
+  }
+
+  .reason-content {
+    width: 100%;
+    margin-top: 30px;
+  }
+
   .team-wrap {
     flex-direction: column;
     align-items: center;
@@ -800,6 +805,22 @@ section {
 /* 🔥 MOBILE */
 /* ========================= */
 @media (max-width: 768px) {
+  .menu-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-card {
+    width: 90%;
+    padding: 30px;
+  }
+  .partner-title,
+  .review-title,
+  .section-title {
+    font-size: clamp(32px, 9vw, 56px);
+    line-height: 1.2;
+    word-break: keep-all;
+  }
   /* HEADER */
   .header {
     height: auto;
@@ -888,7 +909,12 @@ section {
 
   .review-card {
     width: 90%;
-    height: 350px;
+    height: 550px;
+  }
+  .review-card img {
+    height: 520px !important; /* 🔥 300 → 420 */
+    height: auto; /* 🔥 핵심 */
+    object-fit: contain; /* 🔥 중요 */
   }
 
   /* PARTNER */
