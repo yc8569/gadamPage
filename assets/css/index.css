@@ -655,6 +655,13 @@ section {
 /* ========================= */
 
 @media (max-width: 768px) {
+  .mobile-break::after {
+    content: "\A"; /* 🔥 줄바꿈 */
+    white-space: pre;
+  }
+  .br {
+    display: block; /* 🔥 모바일에서만 줄바꿈 */
+  }
   .reason-wrap {
     display: flex !important; /* 🔥 grid 강제 제거 */
     flex-direction: column !important; /* 🔥 세로 강제 */
