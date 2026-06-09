@@ -14,7 +14,8 @@ html {
 
 body {
   /* font-family: "SUIT", sans-serif; */
-  font-family: "Pretendard", sans-serif;
+  font-family: "Noto Serif KR", serif;
+
   background: #355f3b;
   color: #fff;
   overflow-x: hidden;
